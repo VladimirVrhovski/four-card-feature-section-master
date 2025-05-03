@@ -1,6 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+	--clr-primary-red: hsl(0, 78%, 62%);
+	--clr-primary-cyan: hsl(180, 62%, 55%);
+	--clr-primary-orange: hsl(34, 97%, 64%);
+	--clr-primary-blue: hsl(212, 86%, 64%);
+	--clr-neutral-grey-500: hsl(234, 12%, 34%);
+	--clr-neutral-grey-400: hsl(212, 6%, 44%);
+	--clr-neutral-white: hsl(0, 0%, 100%);
+	--clr-neutral-off-white: hsl(0, 0%, 98%);
+
+	--fs-regular: 15px;
+	--fs-primary-heading: 1.6rem;
+	--fs-secondary-heading: 1.6rem;
+	--fs-card-title: 1.5rem;
+
+	--fw-light: 200;
+	--fw-regular: 400;
+	--fw-bold: 600;
+}
+
 /* CSS Reset */
 
-* {
+*,
+*::before,
+*::after {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -12,13 +36,99 @@ body {
 	width: 100%;
 }
 
+/* General styling */
+
+body {
+	font-family: "Poppins", sans-serif;
+	font-weight: var(--fw-regular);
+	font-size: var(--fs-regular);
+	color: var(--clr-neutral-grey-500);
+	background-color: var(--clr-neutral-off-white);
+	line-height: 1.5;
+}
+
+.section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 4rem;
+	padding: 2.5rem 1.5rem;
+}
+
+.section-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.primary-heading {
+	font-size: var(--fs-primary-heading);
+	font-weight: var(--fw-bold);
+}
+
+.secondary-heading {
+	font-size: var(--fs-secondary-heading);
+	font-weight: var(--fw-light);
+}
+
+.description {
+	margin-block-start: 1rem;
+}
+
+.card-container {
+	--gap: 2rem;
+	--border-color: var(--clr-neutral-white);
+
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap);
+}
+
+@media (min-width: 768px) {
+	.card-container {
+		flex-direction: row;
+		align-items: center;
+	}
+}
+
+.card-group {
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap);
+}
+
+.card {
+	position: relative;
+	max-width: 340px;
+	aspect-ratio: 4/3;
+	padding: 2rem 1.5rem;
+	border-radius: 1rem;
+	box-shadow: 0 10px 20px -5px var(--clr-neutral-grey-400);
+	background-color: var(--clr-neutral-white);
+	overflow: hidden;
+}
+
+.card::before {
+	content: "";
+	width: 100%;
+	height: 6px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: var(--border-color);
+}
+
+.icon-container {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	margin-block-start: 2rem;
+}
+
 /* Atrribution */
 
 .attribution {
-	position: absolute;
-	bottom: 5px;
-	left: 50%;
-	transform: translateX(-50%);
 	margin-inline: auto;
 	font-size: 11px;
 	text-align: center;
