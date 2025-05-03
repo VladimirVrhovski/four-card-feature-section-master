@@ -20,6 +20,13 @@
 	--fw-bold: 600;
 }
 
+@media (min-width: 768px) {
+	:root {
+		--fs-primary-heading: 2.25rem;
+		--fs-secondary-heading: 2.25rem;
+	}
+}
+
 /* CSS Reset */
 
 *,
@@ -74,6 +81,7 @@ body {
 
 .description {
 	margin-block-start: 1rem;
+	max-width: 55ch;
 }
 
 .card-container {
@@ -100,7 +108,7 @@ body {
 
 .card {
 	position: relative;
-	max-width: 330px;
+	max-width: 340px;
 	padding: 2rem 1.5rem;
 	border-radius: 1rem;
 	box-shadow: 0 10px 30px -15px var(--clr-neutral-grey-400);
