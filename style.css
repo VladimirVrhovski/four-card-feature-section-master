@@ -80,14 +80,14 @@ body {
 	--gap: 2rem;
 	--border-color: var(--clr-neutral-white);
 
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 1fr;
 	gap: var(--gap);
 }
 
 @media (min-width: 768px) {
 	.card-container {
-		flex-direction: row;
+		grid-template-columns: 1fr 1fr 1fr;
 		align-items: center;
 	}
 }
@@ -100,11 +100,10 @@ body {
 
 .card {
 	position: relative;
-	max-width: 340px;
-	aspect-ratio: 4/3;
+	max-width: 330px;
 	padding: 2rem 1.5rem;
 	border-radius: 1rem;
-	box-shadow: 0 10px 20px -5px var(--clr-neutral-grey-400);
+	box-shadow: 0 10px 30px -15px var(--clr-neutral-grey-400);
 	background-color: var(--clr-neutral-white);
 	overflow: hidden;
 }
@@ -123,7 +122,7 @@ body {
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-end;
-	margin-block-start: 2rem;
+	margin-block: 1.75rem;
 }
 
 /* Atrribution */
